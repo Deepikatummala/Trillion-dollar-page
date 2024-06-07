@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: grey;
+    text-align: center;
+  }
+  
+  .body {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
+  
+  
+  .main-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #646464;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+  }
+  
+  header img {
+    width: 30%;
+    height: auto;
+    margin: 0;
+  }
+  
+  ul {
+    display: inline-flex;
+    gap: 40px;
+    list-style-type: disc;
+    list-style-image: linear-gradient(gold);
+    margin-top: 10px;
+  }
+  
+  ul li {
+    color: white;
+    font-size: 1rem;
+    padding: 2px;
+  }
+  
+  ul li:hover {
+    cursor: pointer;
+  }
+  
+  ul li::marker {
+    color: goldenrod;
+  }
+  
+  .li1 {
+    list-style-type: none;
+  }
+  
+  .links {
+    background-color: #d9ab22;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+  }
+  
+  .links a {
+    color: white;
+    cursor: pointer;
+  }
+  
+  canvas {
+    cursor: pointer; /* Change cursor to pointer when hovering over canvas */
+    background-color: #fefaf6;
+    margin-bottom: -4px;
+  }
+  
+  footer {
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+    background-color: #646464;
+    margin: 20px auto;
+    padding: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Mobile Devices (up to 480px) */
+  @media (max-width: 480px) {
+    .main-container, footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+  
+    header img {
+        width: 70%;
+    }
+  
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+  
+    .banner-1 {
+        display: none; /* Hide banners on small screens */
+    }
+  
+    .links {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+  
+    .links a {
+        padding: 5px 0;
+    }
+  
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+  }
+  
+  /* Tablets (481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .main-container, footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+  
+    header img {
+        width: 50%;
+    }
+  
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+  
+    .banner-1 {
+        display: none; /* Hide banners on medium screens */
+    }
+  
+    .links {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+  
+    .links a {
+        padding: 5px 0;
+    }
+  
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+  }
+  
+  /* Desktops (769px and up) */
+  @media (min-width: 769px) {
+    .main-container, footer {
+        width: 80%;
+        margin: 0 auto;
+    }
+  
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60px;
+        padding-top: 10px;
+    }
+  
+    header img {
+        width: 30%;
+    }
+  
+    ul {
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 10px;
+    }
+  
+    .banner-1 {
+        display: block; /* Show banners on large screens */
+    }
+  
+    .links {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 30px;
+        padding-top: 10px;
+    }
+  
+    .links a {
+        padding: 0;
+    }
+  
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+  }
