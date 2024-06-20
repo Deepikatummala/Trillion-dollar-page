@@ -109,7 +109,7 @@
   /* Mobile Devices (up to 480px) */
   @media (max-width: 480px) {
     .main-container, footer {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
   
@@ -155,7 +155,7 @@
   /* Tablets (481px to 768px) */
   @media (min-width: 481px) and (max-width: 768px) {
     .main-container, footer {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
   
@@ -171,9 +171,9 @@
     }
   
     ul {
-        flex-direction: column;
+    
         align-items: center;
-        gap: 20px;
+        gap: 25px;
         margin-top: 10px;
     }
   
@@ -182,7 +182,7 @@
     }
   
     .links {
-        flex-direction: column;
+      
         align-items: center;
         height: auto;
         padding: 10px 0;
@@ -201,7 +201,7 @@
   /* Desktops (769px and up) */
   @media (min-width: 769px) {
     .main-container, footer {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
   
