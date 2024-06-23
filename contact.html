@@ -1,29 +1,59 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contact.css">
-    
+  </head>
+  <body>
+    <section class="body">
 
+      <section class="main-container">
+        <header>
+          <img src="trillion.png" alt="Trillion Dollar Logo" />
+          <ul>
+            <li class="li1">1,000,000 pixels</li>
+            <li>Own a piece of internet history</li>
+          </ul>
+        </header>
+        <div class="links">
+          <a class="nav" href="index.html">Homepage</a>
+          
+          <a class="nav" href="contact.html">Contact me</a>
+        </div>
+        <div>
+          
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
+              <h2>Contact Us</h2>
+              <input type="hidden" name="access_key" value="541baaf8-5f5b-4135-92bc-c596ded5d66f">
+              
+              <input type="text" id="name" name="Name" placeholder="Name" required>
+           
+              <input type="email" id="email" name="Email" placeholder="Email" required>
+             
+              <input type="text" id="Subject" name="Subject" placeholder=" Subject">
+             
+              <textarea name="message" id="message" placeholder="Please enter your comments..." required></textarea>
+              <br>
+              <br>
+              <button type="submit" >Submit</button>
+          </form>
+          
+        </div>
 
-</head>
-<body>
-  <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
-    <h2>Contact Us</h2>
-    <input type="hidden" name="access_key" value="541baaf8-5f5b-4135-92bc-c596ded5d66f">
-    
-    <input type="text" id="name" name="Name" placeholder="Name" required>
- 
-    <input type="email" id="email" name="Email" placeholder="Email" required>
-   
-    <input type="text" id="Subject" name="Subject" placeholder=" Subject">
-   
-    <textarea name="message" id="message" placeholder="Please enter your comments..." required></textarea>
-    <button type="submit" >Submit</button>
-</form>
+      </section>
 
-
-</body>
-</html>
+    </section>
+    <footer>
+      <p>
+        The Trillion Dollar Homepage © 2024 Vamsi Ikkurthi. All rights reserved.
+        I am not responsible for the content of external sites. Images featured
+        on homepage are © of their respective owners.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
