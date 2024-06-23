@@ -1,36 +1,42 @@
-let w, h, c, ctx;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const init = () => {
+        const canvas = document.querySelector("canvas");
+        const width = 1000;
+        const height = 1000;
+        const gridSize = 10;
+        canvas.width = width;
+        canvas.height = height;
+        const context = canvas.getContext("2d");
 
-const init = () => {
-    c = document.querySelector("canvas");
-    w = 1000; // Set width to 1000 pixels
-    h = 1000; // Set height to 1000 pixels
-    c.width = w;
-    c.height = h;
-    ctx = c.getContext("2d");
-    draw();
-    setupEventListeners();
-}
+        drawGrid(context, width, height, gridSize);
+        setupEventListeners(canvas, width, gridSize);
+    };
 
-const draw = () => {
-    let gridSize = 10; // Number of pixels in each grid
-    for(let i = 0; i < w; i += gridSize){
-        for(let j = 0; j < h; j += gridSize){
-            ctx.strokeStyle = "grey"; // Set border color to grey
-            ctx.strokeRect(i, j, gridSize, gridSize); // Draw a border rectangle
+    const drawGrid = (context, width, height, gridSize) => {
+        context.strokeStyle = "grey"; // Set border color to grey
+        for (let i = 0; i < width; i += gridSize) {
+            for (let j = 0; j < height; j += gridSize) {
+                context.strokeRect(i, j, gridSize, gridSize); // Draw a border rectangle
+            }
         }
-    }
-}
+    };
 
-const setupEventListeners = () => {
-    let gridSize = 10; // Number of pixels in each grid
-    c.addEventListener('click', function(event) {
-        let x = event.offsetX;
-        let y = event.offsetY;
-        let gridX = Math.floor(x / gridSize);
-        let gridY = Math.floor(y / gridSize);
-        let gridNumber = gridX + gridY * (w / gridSize);
-        alert(`Grid Number: ${gridNumber}`);
-    });
-}
+    const setupEventListeners = (canvas, width, gridSize) => {
+        canvas.addEventListener('click', (event) => {
+            const x = event.offsetX;
+            const y = event.offsetY;
+            const gridX = Math.floor(x / gridSize);
+            const gridY = Math.floor(y / gridSize);
+            const gridNumber = gridX + gridY * (width / gridSize);
+            openLink(gridNumber);
+        });
+    };
 
-window.onload = init;
+    const openLink = (gridNumber) => {
+        const baseUrl = "https://example.com/grid/"; // Base URL to which grid number will be appended
+        const url = `${baseUrl}${gridNumber}`;
+        window.location.href = url;
+    };
+
+    init();
+});
